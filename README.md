@@ -1,6 +1,5 @@
 
 
-```markdown
 # JobNexus 🔗
 
 A modern full-stack job portal application connecting job seekers with employers.
