@@ -1,4 +1,4 @@
-## Based on your project structure, here's a professional README:
+
 
 ```markdown
 # JobNexus 🔗
