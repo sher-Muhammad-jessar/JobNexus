@@ -9,14 +9,14 @@ A modern full-stack job portal application connecting job seekers with employers
 ![Python](https://img.shields.io/badge/Backend-Python-3776AB)
 ![Tailwind](https://img.shields.io/badge/Styling-Tailwind_CSS-38B2AC)
 
-## 📋 Project Overview
+##  Project Overview
 
 JobNexus is a comprehensive job portal that provides a seamless platform for:
 - **Job Seekers** to find and apply for jobs
 - **Employers** to post job openings and manage applications
 - **Real-time** job matching and application tracking
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 JobNexus/
@@ -35,23 +35,23 @@ JobNexus/
 └── .gitignore               # Global git ignore rules
 ```
 
-## 🚀 Features
+##  Features
 
 ### For Job Seekers
-- 🔍 Advanced job search and filtering
-- 📱 Responsive design for all devices
-- 💼 Personalized job recommendations
-- 📊 Application tracking dashboard
-- 🔔 Real-time notifications
+-  Advanced job search and filtering
+-  Responsive design for all devices
+-  Personalized job recommendations
+-  Application tracking dashboard
+-  Real-time notifications
 
 ### For Employers
-- 🎯 Smart candidate matching
-- 📈 Analytics and insights
-- 👥 Applicant management system
-- 🏢 Company profile management
-- 💬 Communication tools
+-  Smart candidate matching
+-  Analytics and insights
+-  Applicant management system
+-  Company profile management
+-  Communication tools
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Frontend
 - **React** - Modern UI library
@@ -70,7 +70,7 @@ JobNexus/
 - **Git** - Version control
 - **npm** - Package management
 
-## 📦 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -133,7 +133,7 @@ JobNexus/
    http://localhost:3000
    ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -157,7 +157,7 @@ EMAIL_PASSWORD=your_app_password
 JOBS_API_KEY=your_api_key
 ```
 
-## 🗃️ Database Schema
+##  Database Schema
 
 The application uses the following main entities:
 
@@ -167,7 +167,7 @@ The application uses the following main entities:
 - **Companies** (Employer profiles)
 - **Skills** (Job seeker competencies)
 
-## 🚀 Deployment
+##  Deployment
 
 ### Backend Deployment
 ```bash
@@ -193,7 +193,7 @@ npm run build
 # - GitHub Pages
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -209,7 +209,7 @@ We welcome contributions! Please follow these steps:
 - Write meaningful commit messages
 - Add tests for new features
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -226,15 +226,15 @@ We welcome contributions! Please follow these steps:
 - Verify connection string in .env
 - Ensure database server is running
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Team
+##  Team
 
 - **Sher Muhammad Jessar** - [GitHub](https://github.com/sher-Muhammad-jessar)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Icons by [Lucide](https://lucide.dev)
 - UI components inspired by modern design systems
@@ -244,7 +244,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ Star this repository if you find it helpful!**
+** Star this repository if you find it helpful!**
 
 [Report Bug](https://github.com/sher-Muhammad-jessar/JobNexus/issues) · [Request Feature](https://github.com/sher-Muhammad-jessar/JobNexus/issues)
 
@@ -256,7 +256,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```powershell
 # Create the README.md file in your project root
 @"
-# JobNexus 🔗
+# JobNexus 
 
 [The entire content above...]
 "@ | Out-File -FilePath README.md -Encoding utf8
