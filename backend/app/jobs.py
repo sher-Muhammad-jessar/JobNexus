@@ -43,7 +43,7 @@ async def fetch_from_findwork(
 
         # Debug logging
         print("\n----------------------------")
-        print("🔍 FindWork Fetch Debug")
+        print(" FindWork Fetch Debug")
         print("URL:", client.build_request("GET", settings.FINDWORK_API_URL, params=params).url)
         print("Status:", resp.status_code)
         print("Response (first 500 chars):", resp.text[:500], "...")

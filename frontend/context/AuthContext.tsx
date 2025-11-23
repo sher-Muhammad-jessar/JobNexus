@@ -37,12 +37,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       if (token) {
         try {
-          console.log('🔄 Initializing auth with stored token...');
+          console.log(' Initializing auth with stored token...');
           const userData = await api.auth.getProfile();
           setUser(userData);
-          console.log('✅ User initialized:', userData);
+          console.log('User initialized:', userData);
         } catch (error) {
-          console.error('❌ Failed to initialize auth:', error);
+          console.error(' Failed to initialize auth:', error);
           localStorage.removeItem('access_token');
           setUser(null);
         }
@@ -56,7 +56,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   // Login function
   const login = (token: string, userData: User) => {
-    console.log('🔐 AuthContext login called with:', { 
+    console.log(' AuthContext login called with:', { 
       token: token ? token.substring(0, 20) + '...' : 'empty', 
       userData 
     });
@@ -66,7 +66,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   // Logout function
   const logout = () => {
-    console.log('🚪 AuthContext logout called');
+    console.log(' AuthContext logout called');
     localStorage.removeItem('access_token');
     setUser(null);
     
@@ -77,7 +77,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   // Update user with partial data (supports all User fields)
   const updateUser = (userData: Partial<User>) => {
-    console.log('📝 AuthContext updateUser called with:', userData);
+    console.log(' AuthContext updateUser called with:', userData);
     
     if (user) {
       // Merge existing user data with new partial data
@@ -93,21 +93,21 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       };
       
       setUser(updatedUser);
-      console.log('✅ User updated successfully:', updatedUser);
+      console.log(' User updated successfully:', updatedUser);
     } else {
-      console.warn('⚠️ Cannot update user: no user is currently logged in');
+      console.warn(' Cannot update user: no user is currently logged in');
     }
   };
 
   // Refresh user data from API
   const refreshUser = async (): Promise<void> => {
     try {
-      console.log('🔄 Refreshing user data from API...');
+      console.log(' Refreshing user data from API...');
       const userData = await api.auth.getProfile();
       setUser(userData);
-      console.log('✅ User data refreshed:', userData);
+      console.log(' User data refreshed:', userData);
     } catch (error) {
-      console.error('❌ Failed to refresh user data:', error);
+      console.error(' Failed to refresh user data:', error);
       throw error;
     }
   };

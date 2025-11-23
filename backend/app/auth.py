@@ -66,25 +66,25 @@ async def register(user: UserCreate):
 async def login_for_access_token(
     form_data: OAuth2PasswordRequestForm = Depends()
 ):
-    # 🔧 ADDED DEBUG LINES - This will show what the backend receives
-    print(f"🔧 DEBUG: Received login request")
-    print(f"🔧 DEBUG - Username received: {form_data.username}")
-    print(f"🔧 DEBUG - Password received: {form_data.password}")
+    #  ADDED DEBUG LINES - This will show what the backend receives
+    print(f"DEBUG: Received login request")
+    print(f"DEBUG - Username received: {form_data.username}")
+    print(f"DEBUG - Password received: {form_data.password}")
     
     email_normalized = form_data.username.lower()
     user = await users_col.find_one({"email": email_normalized})
 
-    print(f"🔧 DEBUG - User found in database: {user is not None}")
+    print(f" DEBUG - User found in database: {user is not None}")
 
     if not user or not verify_password(form_data.password, user["password"]):
-        print(f"🔧 DEBUG - Login failed: User not found or password incorrect")
+        print(f" DEBUG - Login failed: User not found or password incorrect")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password"
         )
 
     token = create_access_token(str(user["_id"]), expires_delta=timedelta(hours=1))
-    print(f"🔧 DEBUG - Login successful, token generated for user: {user['email']}")
+    print(f" DEBUG - Login successful, token generated for user: {user['email']}")
     return {"access_token": token, "token_type": "bearer"}
 
 

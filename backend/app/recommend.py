@@ -126,11 +126,7 @@ async def get_recommended_jobs(current_user: dict = Depends(get_current_user)):
             print(f"Fallback also failed: {fallback_error}")
             return []
 
-# Remove the conflicting /jobs/ endpoint since jobs.py already has it
-# @router.get("/jobs/")
-# async def get_all_jobs(current_user: dict = Depends(get_current_user)):
-#     # This conflicts with jobs.py router - remove it
-#     pass
+
 
 @router.get("/debug-jobs")
 async def debug_jobs():

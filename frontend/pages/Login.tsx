@@ -21,31 +21,31 @@ export const Login: React.FC = () => {
     setLoading(true);
 
     try {
-      console.log('🔑 Starting authentication process...');
+      console.log(' Starting authentication process...');
       
       if (isLogin) {
-        console.log('🔑 Attempting login...');
+        console.log(' Attempting login...');
         // Login returns { access_token, token_type }
         const loginResponse = await api.auth.login(email, password);
-        console.log('✅ Login API successful:', loginResponse);
+        console.log(' Login API successful:', loginResponse);
         
         // Store token
         localStorage.setItem('access_token', loginResponse.access_token);
-        console.log('✅ Token stored in localStorage');
+        console.log(' Token stored in localStorage');
         
         // Get user profile
-        console.log('🔑 Fetching user profile...');
+        console.log(' Fetching user profile...');
         const userProfile = await api.auth.getProfile();
-        console.log('✅ User profile loaded:', userProfile);
+        console.log(' User profile loaded:', userProfile);
         
         // Call login with correct structure
         login(loginResponse.access_token, userProfile);
         
       } else {
-        console.log('🔑 Attempting registration...');
+        console.log(' Attempting registration...');
         // Register returns User directly
         const registerResponse = await api.auth.register({ email, password, name });
-        console.log('✅ Registration successful:', registerResponse);
+        console.log(' Registration successful:', registerResponse);
         
         // For registration, you might need to login after registering
         const loginResponse = await api.auth.login(email, password);
@@ -55,11 +55,11 @@ export const Login: React.FC = () => {
         login(loginResponse.access_token, userProfile);
       }
       
-      console.log('🔄 Redirecting to dashboard...');
+      console.log(' Redirecting to dashboard...');
       navigate('/'); // This will go to the protected route which shows Dashboard
       
     } catch (err: any) {
-      console.error('❌ Authentication failed:', err);
+      console.error(' Authentication failed:', err);
       setError(err.message || 'Authentication failed');
     } finally {
       setLoading(false);
